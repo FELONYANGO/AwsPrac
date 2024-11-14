@@ -1,0 +1,26 @@
+graph TD
+  A[On-Premises Network] --> |Connection 1| B[Direct Connect LAG]
+  A --> |Connection 2| B
+  A --> |Connection 3| B
+  A --> |Connection 4| B
+  
+  B --> C[Virtual Private Cloud (VPC)]
+  B --> D[Public AWS Services]
+  B --> E[Transit Gateway]
+  
+  subgraph AWS_Direct_Connect
+    B
+  end
+  
+  subgraph AWS_Cloud
+    C
+    D
+    E
+  end
+  
+  C --> F[EC2 Instances]
+  C --> G[RDS Database]
+  D --> H[S3 Bucket]
+  D --> I[DynamoDB]
+  E --> J[Multiple VPCs]
+  E --> K[Global Network Connections]
