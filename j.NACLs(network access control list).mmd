@@ -1,0 +1,8 @@
+graph TD
+  Internet --> NACL[Network ACL - Public Subnet]
+  NACL --> Public_Subnet[Public Subnet]
+  Public_Subnet --> Instance1[EC2 Instance 1]
+
+  Private_Subnet[Private Subnet] --> Instance2[EC2 Instance 2]
+  Instance2 --> NACL_Private[Network ACL - Private Subnet]
+  NACL_Private --> Instance3[EC2 Instance 3]
