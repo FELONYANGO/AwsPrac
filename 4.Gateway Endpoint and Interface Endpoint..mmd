@@ -1,0 +1,11 @@
+graph TD
+  subgraph AWS Cloud
+    A[Private Subnet with EC2 Instances]
+    A -->|Gateway Endpoint| B[S3 Amazon Simple Storage Service]
+    A -->|Interface Endpoint| C[Secrets Manager]
+  end
+
+  subgraph Internet
+    B -->|Public S3 Traffic Avoided by Gateway Endpoint| D[Internet]
+    C -->|Public Service Traffic Avoided by Interface Endpoint| D
+  end

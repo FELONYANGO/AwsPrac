@@ -1,0 +1,12 @@
+graph TD
+  A[On-Premises Network] -->|Direct Connect| B[Direct Connect Gateway]
+  A -->|VPN Connection| C[Virtual Private Gateway (VGW)]
+  
+  subgraph AWS Cloud
+    B --> D[VPC (Virtual Private Cloud)]
+    C --> D
+    D --> E[EC2 Instances]
+    D --> F[RDS Database]
+  end
+  
+  B -.->|Optionally connected to multiple VPCs| G[Other VPCs]
