@@ -1,0 +1,40 @@
+graph TD
+  subgraph AWS_Cloud
+    A[Amazon CloudFront]
+    B[S3 - Static Assets]
+    C[ALB - Load Balancer]
+    D[AWS Auto Scaling - EC2 or Fargate]
+    E[RDS - Multi-AZ Database]
+    F[DynamoDB - NoSQL Database]
+    G[ElastiCache]
+    H[Private Subnet]
+    I[Public Subnet]
+  end
+
+  subgraph Networking
+    J[VPC]
+    K[NAT Gateway]
+    L[Internet Gateway]
+    M[VPN Gateway]
+  end
+
+  subgraph Monitoring_and_Security
+    N[CloudWatch]
+    O[CloudTrail]
+    P[WAF]
+    Q[GuardDuty]
+    R[Secrets Manager]
+  end
+
+  A --> B
+  A --> C
+  C --> D
+  D --> E
+  D --> F
+  F --> G
+  H --> D
+  H --> E
+  I --> C
+  K --> H
+  L --> I
+  M --> J
