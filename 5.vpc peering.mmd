@@ -1,0 +1,13 @@
+graph TD
+  subgraph VPC_A [VPC A]
+    A1[Subnet A1 - EC2 Instance]
+    A2[Subnet A2 - RDS Database]
+  end
+  
+  subgraph VPC_B [VPC B]
+    B1[Subnet B1 - EC2 Instance]
+    B2[Subnet B2 - S3 Bucket]
+  end
+  
+  A1 -- VPC Peering --> B1
+  A2 -- VPC Peering --> B2
