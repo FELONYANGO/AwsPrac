@@ -1,0 +1,22 @@
+graph TD
+  subgraph Transit_Hub_VPC["Transit Hub VPC"]
+    A[Transit Gateway]
+    B[VPN Gateway]
+    C[Direct Connect]
+  end
+
+  subgraph Spoke_VPCs["Spoke VPCs"]
+    D[VPC 1]
+    E[VPC 2]
+    F[VPC 3]
+  end
+
+  subgraph On-Premises
+    G[Corporate Data Center]
+  end
+
+  G -->|VPN| B
+  G -->|Direct Connect| C
+  D -->|Peering| A
+  E -->|Peering| A
+  F -->|Peering| A
