@@ -1,0 +1,18 @@
+
+graph TD
+  subgraph User_Device
+    U[User's Computer]
+  end
+  
+  subgraph AWS_Client_VPN
+    VPN[Client VPN Endpoint]
+  end
+  
+  subgraph VPC
+    A[EC2 Instance]
+    B[RDS Database]
+  end
+  
+  U -- Connects to VPN --> VPN
+  VPN -- Provides access to --> A
+  VPN -- Provides access to --> B
