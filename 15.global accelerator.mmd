@@ -1,0 +1,13 @@
+graph TD
+    A[Users Worldwide] --> B[Global Accelerator]
+
+    subgraph AWS Backbone
+        B --> C[Edge Location 1]
+        B --> D[Edge Location 2]
+    end
+
+    subgraph Endpoint Groups
+        C --> E[Application Endpoint EU]
+        D --> F[Application Endpoint US]
+        B --> G[Application Endpoint Asia]
+    end
