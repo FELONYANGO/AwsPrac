@@ -1,0 +1,35 @@
+graph TD
+    A[EBS Optimization Techniques]
+    
+    A --> B[Volume Selection]
+    B --> B1[General Purpose SSD gp3/gp2]
+    B --> B2[Provisioned IOPS SSD io2/io1]
+    B --> B3[Throughput-Optimized HDD st1]
+    B --> B4[Cold HDD sc1]
+    
+    A --> C[Performance Optimization]
+    C --> C1[Choose the Right Volume Type]
+    C --> C2[Optimize Throughput and IOPS]
+    C --> C3[Enable EBS-Optimized Instances]
+    C --> C4[Use RAID for Aggregation]
+    C --> C5[Pre-Warm Volumes]
+    C --> C6[Elastic Volumes for Dynamic Resizing]
+    
+    A --> D[Cost Optimization]
+    D --> D1[Use gp3 Volumes]
+    D --> D2[Right-Sizing Volumes]
+    D --> D3[Delete Unused Volumes]
+    D --> D4[Leverage Savings Plans]
+    D --> D5[Snapshot Management]
+    
+    A --> E[Backup and Recovery]
+    E --> E1[Use Snapshots for Incremental Backups]
+    E --> E2[Automate Backups with Lifecycle Policies]
+    E --> E3[Cross-Region Snapshots]
+    
+    A --> F[Operational Best Practices]
+    F --> F1[Tagging for Management]
+    F --> F2[Monitor with CloudWatch]
+    F --> F3[Enable Encryption]
+    F --> F4[Fast Snapshot Restore]
+    F --> F5[Set Alarms for Storage Limits]
