@@ -1,0 +1,29 @@
+graph TD
+  subgraph Cluster_Placement_Group["Cluster Placement Group"]
+    A[EC2 Instance 1]
+    B[EC2 Instance 2]
+    C[EC2 Instance 3]
+    A --> B
+    B --> C
+  end
+
+  subgraph Spread_Placement_Group["Spread Placement Group"]
+    D[EC2 Instance 1 in Zone A]
+    E[EC2 Instance 2 in Zone B]
+    F[EC2 Instance 3 in Zone C]
+  end
+
+  subgraph Partition_Placement_Group["Partition Placement Group"]
+    subgraph Partition_1["Partition 1"]
+      G[EC2 Instance 1]
+      H[EC2 Instance 2]
+    end
+    subgraph Partition_2["Partition 2"]
+      I[EC2 Instance 3]
+      J[EC2 Instance 4]
+    end
+    subgraph Partition_3["Partition 3"]
+      K[EC2 Instance 5]
+      L[EC2 Instance 6]
+    end
+  end

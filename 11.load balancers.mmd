@@ -1,0 +1,27 @@
+graph TD
+    A[User Request] --> B[AWS Load Balancer]
+
+    subgraph Targets
+        C[EC2 Instance 1]
+        D[EC2 Instance 2]
+        E[EC2 Instance 3]
+    end
+
+    subgraph Types
+        F[Application Load Balancer]
+        G[Network Load Balancer]
+        H[Gateway Load Balancer]
+        I[Classic Load Balancer]
+    end
+
+    B --> F
+    B --> G
+    B --> H
+    B --> I
+
+    F --> C
+    F --> D
+    F --> E
+    G --> C
+    G --> D
+    G --> E

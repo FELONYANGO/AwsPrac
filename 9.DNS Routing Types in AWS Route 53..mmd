@@ -1,0 +1,19 @@
+graph TD
+    A[User Request] --> B[Route 53]
+    
+    B --> C[Simple Routing]
+    C --> C1[Single Endpoint]
+
+    B --> D[Weighted Routing]
+    D --> D1[Endpoint A - 70%] 
+    D --> D2[Endpoint B - 30%]
+
+    B --> E[Latency-Based Routing]
+    E --> E1[Nearest Endpoint]
+
+    B --> F[Geolocation Routing]
+    F --> F1[Region-Based Endpoint]
+
+    B --> G[Failover Routing]
+    G --> G1[Primary Endpoint]
+    G --> G2[Secondary Endpoint - if Primary Fails]

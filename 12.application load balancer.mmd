@@ -1,0 +1,18 @@
+graph TD
+    A[User Request] --> B[Application Load Balancer]
+
+    subgraph Listeners and Rules
+        B --> C[HTTP Listener Port 80]
+        B --> D[HTTPS Listener Port 443]
+
+        C --> E[Rule: URL path /api]
+        C --> F[Rule: URL path /images]
+        D --> G[Rule: Host-based routing www.example.com]
+        D --> H[Rule: Default - Redirect HTTP to HTTPS]
+    end
+
+    subgraph Target Groups
+        E --> I[Target Group 1 - EC2 Instances]
+        F --> J[Target Group 2 - Lightsail Instances]
+        G --> K[Target Group 3 - EC2 Instances]
+    end

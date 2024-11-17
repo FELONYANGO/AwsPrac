@@ -1,0 +1,11 @@
+graph TD
+    A[User Request] --> B[Gateway Load Balancer]
+
+    subgraph Inspection VPC
+        B --> C[Target Appliance 1 - Firewall]
+        B --> D[Target Appliance 2 - Intrusion Detection System]
+        B --> E[Target Appliance 3 - Custom Security Tool]
+    end
+
+    F[EC2 Instance or Other Resource] -->|Traffic Routed to GWLB| B
+    B --> G[Return Traffic to Destination]

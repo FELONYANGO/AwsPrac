@@ -1,0 +1,14 @@
+graph TD
+    A[User Request] --> B[Route 53 Geoproximity Routing]
+    
+    B --> C[Resource A - U.S.]
+    B --> D[Resource B - Europe]
+    B --> E[Resource C - Asia]
+
+    subgraph Bias Adjustment
+        F[Shift Traffic Closer]
+        G[Shift Traffic Farther]
+    end
+
+    C --> F
+    E --> G

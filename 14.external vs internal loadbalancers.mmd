@@ -1,0 +1,11 @@
+graph TD
+    A[User on Internet] --> B[External Load Balancer]
+    B --> C[Public Web Server EC2]
+
+    subgraph VPC
+        D[Internal Application Server] --> E[Internal Load Balancer]
+        E --> F[Backend Database]
+    end
+
+    C -->|Internal Call| E
+    E --> F
