@@ -1,0 +1,11 @@
+graph TD
+    A[S3 Bucket]
+    A --> B[Object 1: beach-sunset.jpg]
+    A --> C[Object 2: vacation-2020.mp4]
+    A --> D[Object 3: college-days.zip]
+    B --> E[Metadata: Upload Date, Size, Tags]
+    C --> F[Storage Class: Standard]
+    D --> G[Storage Class: Glacier]
+    A --> H[Versioning: v1, v2, v3]
+    A --> I[Access Controls: IAM, Policies, ACL]
+    A --> J[Encryption: At-rest & In-transit]
