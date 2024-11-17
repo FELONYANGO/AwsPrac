@@ -1,0 +1,14 @@
+graph TD
+    A[Users/Applications] -->|Store and retrieve files| B[S3 Object Storage]
+    A -->|Low-latency storage| C[EBS Block Storage]
+    A -->|Collaborative file sharing| D[EFS Network File System]
+    A -->|Long-term archiving| E[S3 Glacier]
+    A -->|Windows and HPC| F[FSx File Systems]
+    A -->|Hybrid storage| G[Storage Gateway]
+
+    B -->|Media files, backups| H[Use Case: Streaming Platform]
+    C -->|Databases, apps| I[Use Case: High-performance Apps]
+    D -->|Shared files| J[Use Case: Multi-user Access]
+    E -->|Archived files| K[Use Case: Rarely Accessed Data]
+    F -->|Specialized file systems| L[Use Case: HPC and Windows Workloads]
+    G -->|On-prem to cloud| M[Use Case: Hybrid Data Transfer]
