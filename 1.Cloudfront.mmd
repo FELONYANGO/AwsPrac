@@ -3,10 +3,11 @@ graph TD
     C[User in Asia] --> D[Nearest Edge Location]
 
     subgraph CloudFront Edge Locations
-        B --> E[S3 Bucket (Origin)]
+        B --> E[S3 Bucket Origin]
         D --> E
     end
 
     subgraph Origin Server
-        E --> F[EC2 Instance (Dynamic Content)]
+        E --> F[EC2 Instance Dynamic Content]
     end
+
