@@ -1,0 +1,60 @@
+graph TD
+    A[AWS Database Services Overview]
+
+    A --> B[Relational Databases]
+    B --> B1[Amazon RDS]
+    B --> B2[Amazon Aurora]
+
+    A --> C[NoSQL Databases]
+    C --> C1[Amazon DynamoDB]
+    C --> C2[Amazon Keyspaces]
+
+    A --> D[Data Warehousing]
+    D --> D1[Amazon Redshift]
+
+    A --> E[In-Memory Databases]
+    E --> E1[ElastiCache for Redis]
+    E --> E2[ElastiCache for Memcached]
+
+    A --> F[Graph Databases]
+    F --> F1[Amazon Neptune]
+
+    A --> G[Time-Series Databases]
+    G --> G1[Amazon Timestream]
+
+    A --> H[Ledger Databases]
+    H --> H1[Amazon QLDB]
+
+    A[AWS Database Modifications]
+
+    A --> B[Configuration Changes]
+    B --> B1[Modify Storage & Instance Type]
+    B --> B2[Enable Multi-AZ or Replication]
+    B --> B3[Backup & Restore Configuration]
+
+    A --> C[Scaling Databases]
+    C --> C1[Scale Vertically Instance Size]
+    C --> C2[Scale Horizontally Read Replicas]
+    C --> C3[Auto Scaling for DynamoDB]
+
+    A --> D[Schema Modifications]
+    D --> D1[Alter Table Structures]
+    D --> D2[Modify Indexes & Constraints]
+
+    A --> E[Security Modifications]
+    E --> E1[Modify IAM Roles]
+    E --> E2[Adjust VPC Security Groups]
+    E --> E3[Modify Access Control Lists ACLs]
+
+    A --> F[Performance Tuning]
+    F --> F1[Modify Query Performance]
+    F --> F2[Adjust Cache Size & Parameters]
+    F --> F3[Optimize Database Indexes]
+
+    A --> G[Migration & Replication]
+    G --> G1[Migrate Databases with DMS]
+    G --> G2[Cross-Region Replication]
+
+    A --> H[Automated Maintenance]
+    H --> H1[Enable Auto Version Upgrades]
+    H --> H2[Enable Automated Backups]

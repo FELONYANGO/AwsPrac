@@ -1,0 +1,24 @@
+
+graph TD
+    A[AWS Storage Gateway] --> B[File Gateway]
+    B --> B1[NFS/SMB Access]
+    B --> B2[Stores Files as S3 Objects]
+    B --> B3[Use Case: File Backup and Collaboration]
+
+    A --> C[Volume Gateway]
+    C --> C1[Cached Volumes]
+    C1 --> C1A[Frequently Accessed Data Cached Locally]
+    C --> C2[Stored Volumes]
+    C2 --> C2A[Entire Dataset Stored Locally with S3 Backups]
+    C --> C3[Use Case: Database Backup and Recovery]
+
+    A --> D[Tape Gateway]
+    D --> D1[Replaces Physical Tape Libraries]
+    D --> D2[Virtual Tapes in S3 or Glacier]
+    D --> D3[Use Case: Archiving and Compliance]
+
+    A --> E[AWS Services Integration]
+    E --> E1[Amazon S3]
+    E --> E2[Amazon Glacier]
+    E --> E3[CloudWatch for Monitoring]
+    E --> E4[IAM for Access Management]
